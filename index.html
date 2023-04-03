@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>live chat room</title>
+</head>
+<body>
+	<h1>Welcome to my Live Chat Room!</h1>
+	<button onclick="runPython()">Run Python Script</button>
+
+	<script src="livechat/main.py"></script>
+	<script>
+		function runPython() {
+			var PythonShell = require('python-shell');
+			PythonShell.run('main.py', function (err) {
+				if (err) throw err;
+				console.log('Python script executed successfully!');
+			});
+		}
+	</script>
+</body>
+</html>
